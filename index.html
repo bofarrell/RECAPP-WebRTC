@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RECAPP | Home</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/webicons.css">
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <div id="clockbox" align="right" style="background-color:#333; color:#fff; padding-right:.5em"></div>
+    
+    <!-- Navigation -->
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name"><p style="align:center"><a href="index.html">RECAPP</a></p></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a href="skool.html" class="darkBlue">School</a></li>
+          <li><a href="contact.html" class="red">Contact</a></li>
+          <li><a href="events.html" class="green">Events</a></li>
+          <li><a href="staff.html" class="yellow">Staff</a></li>
+          <li><a href="register.html" class="pink">Test</a></li>
+          <li><a href="classes.html" class="lightBlue">Classes</a></li>
+          <li><a href="about.html" class="darkBlue">About</a></li>
+        </ul>        
+      </section>
+    </nav>
+    <!-- End of Navigation -->
+    <br>
+
+    <!-- Slider -->
+    <div class="row">
+      <div class="large-12 columns">
+        <ul class="orbit" data-orbit>
+          <li>
+            <img src="img/1.jpg" alt="slide 1" />
+            <div class="orbit-caption"><!--insert caption here if you wish!--></div>
+          </li>
+          <li class="active">
+            <img src="img/2.jpg" alt="slide 2" />
+            <div class="orbit-caption"><!--insert caption here if you wish!--></div>
+          </li>
+          <li>
+            <img src="img/3.jpg" alt="slide 3" />
+            <div class="orbit-caption"><!--insert caption here if you wish!--></div>
+          </li>
+          <li class="active">
+            <img src="img/4.jpg" alt="slide 4" />
+            <div class="orbit-caption"><!--insert caption here if you wish!--></div>
+          </li>
+          <li>
+            <img src="img/5.jpg" alt="slide 5" />
+            <div class="orbit-caption"><!--insert caption here if you wish!--></div>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- End of slider -->
+
+    <!-- Content -->
+    <div class="row">
+      <div class="large-12 columns">
+        <br>
+      </div>
+    </div>
+    <!-- End of content -->
+
+    <!-- footer -->
+    <br>
+    <div class="footer">
+      <div class="row">
+        <div class="large-12 columns">
+            <div class="row">
+              <div class="large-4 columns small-12">
+                <div class="panel">
+                  <div class="panelHeading"><h3>What Is RECAPP?</h3></div>
+                  <div class="panelInner"><p style="text-align:justify">RECAPP is an application that allows your children attend school from any location with their fellow classmates. RECAPP allows all children to have access to classroom education. This is achieved using real time communication via your web browser.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="large-4 columns small-12">
+                <div class="panel">
+                  <div class="panelHeading"><h3>Get In Touch</h3></div>
+                  <div class="panelInner">
+                    <p>
+                      <a class="webicon facebook large" href="#">Facebook</a>
+                      <a class="webicon flickr large" href="#">Flickr</a>
+                      <a class="webicon googleplus large" href="#">Google+</a>
+                      <a class="webicon linkedin large" href="#">LinkedIn</a>
+                      <a class="webicon twitter large" href="#">Twitter</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="large-4 columns small-12">
+                <div class="panel">
+                  <div class="panelHeading"><h3>Our Mission</h3></div>
+                  <div class="panelInner"><p style="text-align:justify">“Education is a right of birth. No longer should gender prohibit learning. No longer should race define your education. No longer will location be a barrier to learning At RECAPP we want to be part of the solution; Education is for everyone.”</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of footer -->
+  
+    <!-- Clock Script -->
+    <script type="text/javascript"> 
+    tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+    function GetClock(){
+    var d=new Date();
+    var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+    if(nyear<1000) nyear+=1900;
+    document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+    }
+
+    window.onload=function(){
+    GetClock();
+    setInterval(GetClock,1000);
+    }
+
+    </script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

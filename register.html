@@ -1,0 +1,229 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+
+	<meta name="keywords" content="WebRTC, HTML5, JavaScript" />
+ 	<meta name="description" content="Client-side WebRTC code samples." />
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  	<base target="_blank
+
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RECAPP | Register</title>
+
+    	<link rel="stylesheet" href="css/foundation.css" />
+    	<link rel="stylesheet" href="css/webicons.css">
+    	<script src="js/vendor/modernizr.js"></script>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  	<link rel="stylesheet" href="css/main.css" />
+  	<link rel="stylesheet" href="css/main_nolint.css" />
+  </head>
+
+  <body>
+    <div id="clockbox" align="right" style="background-color:#333; color:#fff; padding-right:.5em"></div>
+    
+    <!-- Navigation -->
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name"><p style="align:center"><a href="index.html">RECAPP</a></p></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a href="skool.html" class="darkBlue">School</a></li>
+          <li><a href="contact.html" class="red">Contact</a></li>
+          <li><a href="events.html" class="green">Events</a></li>
+          <li><a href="staff.html" class="yellow">Staff</a></li>
+          <li><a href="register.html" class="pink">Test</a></li>
+          <li><a href="classes.html" class="lightBlue">Classes</a></li>
+          <li><a href="about.html" class="darkBlue">About</a></li>
+        </ul>        
+      </section>
+    </nav>
+    <!-- End of Navigation -->
+    <br>
+
+    <!-- Content -->
+    <div class="row">
+      <div class="pageHeader pink">
+        <h1 align="center"><a href="https://test.webrtc.org/"><font color ="#FFFFFF"> WebRTC Test</font></a></h1>
+      </div>
+      <div class="large-8 columns">
+        <div class="panel panelInner"><p align="center">
+<!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48530561-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script src="../../webrtc-adapter/adapter.js"></script>
+  <script src="../../webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="/../../core-toolbar/core-toolbar.html">
+  <link rel="import" href="/../../core-icon/core-icon.html">
+  <link rel="import" href="/../../core-icons/av-icons.html">
+  <link rel="import" href="/../../core-collapse/core-collapse.html">
+  <link rel="import" href="/../../paper-dialog/paper-dialog.html">
+  <link rel="import" href="/../../paper-dialog/paper-dialog-transition.html">
+  <link rel="import" href="/../../paper-progress/paper-progress.html">
+  <link rel="import" href="/../../paper-button/paper-button.html">
+  <link rel="import" href="/../../paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="ui/line-chart.html">
+  <link rel="import" href="ui/gum-dialog.html">
+  <link rel="import" href="ui/report-dialog.html">
+</head>
+<body unresolved>
+  <gum-dialog heading="Welcome to WebRTC Troubleshooter"></gum-dialog>
+
+  <!-- Title toolbar -->
+  <core-toolbar class="title">
+    <span flex> </span>
+    <paper-icon-button icon="menu" onclick="settingsDialog.toggle()"></paper-icon-button>
+    <paper-icon-button icon="bug-report" onclick="report.open()"></paper-icon-button>
+    <paper-button id="start-button" raised disabled>Start WebRTC Test</paper-button>
+  </core-toolbar>
+
+  <!-- Placeholder for dynamically generated test suites. -->
+  <div id="content"></div>
+
+  <footer>
+    <span><a href="//www.google.com/accounts/TOS">Terms</a></span>
+    <span><a href="//www.google.com/policies/privacy/">Privacy</a></span>
+  </footer>
+
+  <!-- Settings dialog -->
+  <paper-dialog id="settings-dialog" heading="Settings" transition="paper-dialog-transition-center">
+    <div class="select"><label>Audio source: <select id="audioSource"></select></label></div>
+    <div class="select"><label>Video source: <select id="videoSource"></select></label></div>
+  </paper-dialog>
+
+  <!-- Bug report dialog -->
+  <report-dialog></report-dialog>
+
+  <!-- Add common files after this line. -->
+  <script src="js/report.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/call.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/ssim.js"></script>
+  <script src="js/util.js"></script>
+
+  <!-- Add tests after this line. -->
+  <script src="js/mictest.js"></script>
+  <script src="js/camresolutionstest.js"></script>
+  <script src="js/conntest.js"></script>
+  <script src="js/bandwidth_test.js"></script></p>
+         
+        </div>
+      </div>
+       <div class="large-4 columns">
+        <div class="panel panelInner">
+          <h4 align="center">Test Features</h4> 
+<p align="justify">WebRTC Trouble Shooter provides a set of tests that can be easily run by a user to help diagnose
+WebRTC related issues. The user can then download a report containing all the gathered information or upload the log and
+create a temporary link with the report result.</P>
+
+<h4 align="center"> Automatic tests </h4>
+<p>
+* Microphone
+  * Audio capture
+    * Checks the microphone is able to produce 2 seconds of non-silent audio
+    * Computes peak level and maximum RMS
+    * Clip detection
+    * Mono mic detection</p>
+<p>* Camera
+  * Check WxH resolution
+    * Checks the camera is able to capture at the requested resolution for 5 seconds
+    * Checks if the frames are frozen or muted/black
+    * Detects how long to start encode frames
+    * Reports encode time and average framerate
+  * Check supported resolutions
+    * Lists resolutions that appear to be supported</p>
+<p>* Connectivity
+  * Udp/Tcp connectivity
+    * Verifies it can talk with a turn server with the given protocol
+  * IPv6 connectivity
+    * Verifies it can gather at least one IPv6 candidate
+  * Data throughput
+    * Establishes a loopback call and tests data channels throughput on the link
+  * Video bandwidth
+    * Establishes a loopback call and tests video performance on the link
+    * Measures rtt on media channels.
+    * Measures bandwidth estimation performance (rampup time, max, average)</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <!-- End of content -->
+
+    <!-- footer -->
+    <br>
+    <div class="footer">
+    <div class="row">
+      <div class="large-12 columns">
+          <div class="row">
+            <div class="large-4 columns small-12">
+              <div class="panel">
+                <div class="panelHeading"><h3>What Is RECAPP?</h3></div>
+                <div class="panelInner"><p style="text-align:justify">RECAPP is an application that allows your children attend school from any location with their fellow classmates. RECAPP allows all children to have access to classroom education. This is achieved using real time communication via your web browser.</p>
+                </div>
+              </div>
+            </div>
+            <div class="large-4 columns small-12">
+              <div class="panel">
+                <div class="panelHeading"><h3>Get In Touch</h3></div>
+                <div class="panelInner">
+                  <p>
+                    <a class="webicon facebook large" href="#">Facebook</a>
+                    <a class="webicon flickr large" href="#">Flickr</a>
+                    <a class="webicon googleplus large" href="#">Google+</a>
+                    <a class="webicon linkedin large" href="#">LinkedIn</a>
+                    <a class="webicon twitter large" href="#">Twitter</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="large-4 columns small-12">
+              <div class="panel">
+                <div class="panelHeading"><h3>Our Mission</h3></div>
+                <div class="panelInner"><p style="text-align:justify">“Education is a right of birth. No longer should gender prohibit learning. No longer should race define your education. No longer will location be a barrier to learning At RECAPP we want to be part of the solution; Education is for everyone.”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <!-- End of footer -->
+  
+    <!-- Clock Script -->
+    <script type="text/javascript">      
+    tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+    function GetClock(){
+    var d=new Date();
+    var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+    if(nyear<1000) nyear+=1900;
+    document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+    }
+    window.onload=function(){
+    GetClock();
+    setInterval(GetClock,1000);
+    }
+    </script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+ 
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
